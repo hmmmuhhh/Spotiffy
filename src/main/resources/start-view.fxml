@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spotiffy.StartController"
+      alignment="CENTER" spacing="20.0" styleClass="vbox">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="Title" styleClass="Title">WELCOME TO SPOTIFFY</Label>
+    <Label fx:id="Subtitle" styleClass="Subtitle">Spotify, but suspicious (and way worse)</Label>
+    <Button text="Log in?" onAction="#onLoginButtonClick" fx:id="loginButton"/>
+    <Button text="Sign up?" onAction="#onSignupButtonClick" fx:id="signupButton"/>
+
+    <Label styleClass="message-label" fx:id="jokeText"/>
+    <Button styleClass="JokeButton" text="SUPER IMPORTANT! CLICK ME!" onAction="#onJokeButtonClick" fx:id="jokeButton"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

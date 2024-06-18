@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.spotiffy.MainController" spacing="20" alignment="CENTER" styleClass="vbox">
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Back to Start" onAction="#switchToStart"/>
+        <TextField fx:id="searchField" promptText="Search for a song..." onAction="#handleSearch"/>
+    </HBox>
+    <ListView fx:id="musicListView" prefHeight="500" prefWidth="700" styleClass="list-view"/>
+    <Label fx:id="currentlyPlayingLabel" text="Currently Playing:"/>
+    <VBox spacing="10" alignment="CENTER">
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Restart" onAction="#handleRestart"/>
+            <Button text="Play" onAction="#handlePlay"/>
+            <Button text="Pause" onAction="#handlePause"/>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="previousButton" text="Previous" onAction="#handlePrevious"/>
+            <Button fx:id="skipButton" text="Skip" onAction="#handleSkip"/>
+        </HBox>
+    </VBox>
+    <Label fx:id="limitMessageLabel" styleClass="warning-label" visible="false" />
+
+    <Label fx:id="alreadyBoughtPremiumLabel" text="Temporary Spotiffy Premium activated! (either pay again every login or never leave the app :] )"
+           styleClass="message-label" layoutX="450" layoutY="500" visible="false"/>
+    <Button fx:id="buyPremiumButton" text="Buy Premium" onAction="#handleBuyPremium" layoutX="450" layoutY="550"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
